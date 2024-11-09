@@ -5,6 +5,8 @@ Objective:
 
 The focus of this project is to perform sentiment analysis on patient reviews for various drugs. The goal is to predict the sentiment (positive or negative) of reviews based on textual data and related features such as drug name, condition treated, and patient ratings. The sentiment prediction will help pharmaceutical companies and healthcare professionals gain insights into patient satisfaction, identify potential issues with drugs, and ultimately improve patient outcomes.
 
+This project will also compare the effectiveness of building and training a model using this dataset versus leveraging a pretrained model trained on more general data.  Organizations are often faced with a build versus buy decision and have access to their own unique datasets.  These decisions often factor in development cost, time to develop, and cost to maintain.  With machine learning, the additional factor of compute resources required to train must also be factored in.  While there is no software cost to leverage the pretrained model, this is a reasonable approximation for leveraging a closed source pretrained model from a software vendor.
+
 Dataset Overview:
 
 The Drug Review Dataset from the UCI Machine Learning Repository is utilized for this analysis. It contains 161,297 entries with the following 7 features:
@@ -24,7 +26,7 @@ Features:
 •	usefulCount(numerical): Count of users who found the review 
     helpful.
 
-Target Variable: The sentiment of the review, which needs to be derived from the rating. A review rating above a certain threshold (e.g., 7/10) will be classified as positive, while a rating below this threshold will be classified as negative.
+Target Variable: The sentiment of the review, which needs to be derived from the rating. A review rating above a certain threshold (e.g., 7/10) will be classified as positive, while a rating below this threshold will be classified as negative.However the rating provides a numerical representation of a user’s satisfaction (on a scale of 1 to 10) while the review text contains much richer, nuanced information that the rating alone cannot capture.
 
 There are no any missing values found in the dataset.
 
@@ -80,9 +82,27 @@ The main challenges expected in this project include:
 
 References:
 
-https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com
+Research papers on sentiment analysis using LSTM and BERT.
 
-https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+Documentation and examples from the Hugging Face Transformers library.
+
+Courses and tutorials on deep learning for NLP, such as Deep Learning Specialization by Andrew Ng.
+
+Deep Learning for NLP with Pytorch — PyTorch Tutorials 2.5.0+cu124 documentation. (n.d.). https://pytorch.org/tutorials/beginner/nlp/index.html
+
+GeeksforGeeks. (2024, March 28). How to use PyTorch for sentiment analysis on textual data? GeeksforGeeks. https://www.geeksforgeeks.org/how-to-use-pytorch-for-sentiment-analysis-on-textual-data/
+
+Savani, B. (2022, March 30). Tutorial on Sentimental Analysis using Pytorch for Beginners | Medium. Medium. https://bhadreshpsavani.medium.com/tutorial-on-sentimental-analysis-using-pytorch-b1431306a2d7
+
+Surdeanu, M., & Valenzuela-Escárcega, M. A. (2024). Deep learning for natural language processing : a gentle introduction (1st ed.). Cambridge University Press.
+
+University of California, Irvine. (n.d.). Drug review dataset (Drugs.com). UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com
+
+Padmanabhan, A., NG, K., & Cole, M. (2019). PyTorch Experiments on NLP and RNN. In Mobile Artificial Intelligence Projects. Packt Publishing, Limited.
+
+Understanding LSTM Networks -- colah’s blog. (n.d.). https://colah.github.io/posts/2015-08-Understanding-LSTMs
+
+Hugging Face. (n.d.). BERT. https://huggingface.co/docs/transformers/en/model_doc/bert
 
 
 
