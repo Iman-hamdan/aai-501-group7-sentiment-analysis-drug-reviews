@@ -57,22 +57,23 @@ The main challenges expected in this project include:
 
 	•	BERT uses a bidirectional approach to understand the context of words in both directions, leading to more accurate sentiment predictions by considering the full context.
 
-	2.	Handling Complex Language Nuances:
+2.	Handling Complex Language Nuances:
 
 	•	Reviews often contain nuances, sarcasm, and complex expressions that are difficult for traditional classifiers to understand.
+
 	•	BERT excels in understanding context, synonyms, and word sense disambiguation, which are critical for accurate sentiment analysis.
 
-	3.	State-of-the-Art Performance:
+4.	State-of-the-Art Performance:
 
 	•	LSTM and BERT have consistently outperformed traditional machine learning models on NLP tasks like sentiment analysis, text classification, and question-answering.
 
 	•	BERT’s pre-trained embeddings can be fine-tuned on your specific dataset, allowing it to adapt to the nuances of the drug reviews.
 
-	4.	Feature Extraction from Raw Text:
+5.	Feature Extraction from Raw Text:
 
 	•	Traditional classifiers require extensive feature engineering, whereas deep learning models like LSTM and BERT can automatically extract high-level features from raw text data, reducing the need for manual feature engineering.
 
-	5.	Scalability for Large Datasets:
+6.	Scalability for Large Datasets:
 
 	•	With a dataset of over 160,000 entries, LSTM and BERT models can efficiently scale and handle large volumes of text, whereas simpler models may struggle with feature extraction and scalability.
 
