@@ -1,0 +1,14 @@
+pandas
+plotly
+nbformat
+torch
+datetime
+pandas
+matplotlib
+numpy
+seaborn
+imblearn
+imbalanced-learn==0.12.4
+scikit-learn
+scipy
+joblib
