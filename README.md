@@ -105,4 +105,11 @@ Understanding LSTM Networks -- colah’s blog. (n.d.). https://colah.github.io/p
 Hugging Face. (n.d.). BERT. https://huggingface.co/docs/transformers/en/model_doc/bert
 
 
+## Project Setup
 
+### 1. Create or Update environemnt
+a. Add dependencies in environment.yaml
+
+b. Run setup-env.ipynb that will check and create/update environment with required libraries
+
+c. Now you can use the created environment to set as interpretor to your project
