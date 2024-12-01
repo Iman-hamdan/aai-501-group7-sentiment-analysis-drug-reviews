@@ -220,9 +220,9 @@ After training, the model is evaluated on a validation set to monitor metrics su
 
 Below is the confusion matrix in model evaluations ,
 
-![alt text](images/bert-confusion.png)
+![alt text](images/BERT-confusion.png)
 
-![alt text](images/bert-loss.png)
+![alt text](images/BERT-loss.png)
 
 ![alt text](images/bert-auc.png)
 
