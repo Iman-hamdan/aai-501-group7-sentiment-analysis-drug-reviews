@@ -124,15 +124,15 @@ The features (review_len, neg, pos, compound) are limited in scope and may not f
 
 #### Model Evaluation :
 
-Classification Report:
-               precision    recall  f1-score   support
+    Classification Report:
+                precision    recall  f1-score   support
 
-           0       0.62      0.68      0.65     21417
-           1       0.64      0.58      0.61     21417
+            0       0.62      0.68      0.65     21417
+            1       0.64      0.58      0.61     21417
 
     accuracy                           0.63     42834
-   macro avg       0.63      0.63      0.63     42834
-weighted avg       0.63      0.63      0.63     42834
+    macro avg       0.63      0.63      0.63     42834
+    weighted avg    0.63      0.63      0.63     42834
 
 ![alt text](images/Logistic-confusion.png)
 
@@ -208,15 +208,15 @@ The model is trained using the AdamW optimizer, which ensures efficient updates 
 
 After training, the model is evaluated on a validation set to monitor metrics such as accuracy, precision, recall, and F1-score.Predictions are made on the test set using the fine-tuned BERT model to measure its performance.
 
-Classification Report:
-              precision    recall  f1-score   support
+    Classification Report:
+                precision    recall  f1-score   support
 
-Not Positive       0.92      0.96      0.94     19474
-    Positive       0.95      0.92      0.94     19454
+    Not Positive       0.92      0.96      0.94     19474
+        Positive       0.95      0.92      0.94     19454
 
-    accuracy                           0.94     38928
-   macro avg       0.94      0.94      0.94     38928
-weighted avg       0.94      0.94      0.94     38928
+        accuracy                           0.94     38928
+       macro avg       0.94      0.94      0.94     38928
+    weighted avg       0.94      0.94      0.94     38928
 
 Below is the confusion matrix in model evaluations ,
 
