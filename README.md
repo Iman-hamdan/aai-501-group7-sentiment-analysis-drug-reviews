@@ -122,6 +122,24 @@ Sentiment analysis often involves contextual and nuanced language, which might n
 
 The features (review_len, neg, pos, compound) are limited in scope and may not fully represent the richness of the review text.
 
+#### Model Evaluation :
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.62      0.68      0.65     21417
+           1       0.64      0.58      0.61     21417
+
+    accuracy                           0.63     42834
+   macro avg       0.63      0.63      0.63     42834
+weighted avg       0.63      0.63      0.63     42834
+
+![alt text](images/Logistic-confusion.png)
+
+![alt text](images/Logistic-auc.png)
+
+
+
 ## LSTM(Least Short Term Memory)
 
 ![alt text](images/LSTM_confusion.png)
@@ -191,21 +209,22 @@ The model is trained using the AdamW optimizer, which ensures efficient updates 
 After training, the model is evaluated on a validation set to monitor metrics such as accuracy, precision, recall, and F1-score.Predictions are made on the test set using the fine-tuned BERT model to measure its performance.
 
 Classification Report:
-
               precision    recall  f1-score   support
 
-     Class 0       0.94      0.95      0.94     14681
-     Class 1       0.97      0.96      0.96     24247
+Not Positive       0.92      0.96      0.94     19474
+    Positive       0.95      0.92      0.94     19454
 
-    accuracy                           0.96     38928
-   macro avg       0.95      0.95      0.95     38928
-weighted avg       0.96      0.96      0.96     38928
+    accuracy                           0.94     38928
+   macro avg       0.94      0.94      0.94     38928
+weighted avg       0.94      0.94      0.94     38928
 
 Below is the confusion matrix in model evaluations ,
 
-![alt text](images/BERT-confusion.png)
+![alt text](images/bert-confusion.png)
 
-![alt text](images/BERT-loss.png)
+![alt text](images/bert-loss.png)
+
+![alt text](images/bert-auc.png)
 
 ## Conclusions and Recommendations :
 
@@ -214,20 +233,20 @@ Below is the confusion matrix in model evaluations ,
 
 
 
--	True Negatives (TN) = 13890: The model correctly identified 13890 
+-	True Negatives (TN) = 18615: The model correctly identified 13890 
     true negative reviews
 
-	False Positives (FP) = 948: The model incorrectly labeled 948 positive reviews as negatives.
+	False Positives (FP) = 1576: The model incorrectly labeled 948 positive reviews as negatives.
 
-	False Negatives (FN) = 791: The model incorrectly labeled 791 snegative reviews as positives.
+	False Negatives (FN) = 859: The model incorrectly labeled 791 snegative reviews as positives.
 
-	True Positives (TP) = 23299: The model correctly identified 23299 positive reviews.
+	True Positives (TP) = 17878: The model correctly identified 23299 positive reviews.
 
 #### Precision:
 
-Class 0 (Positive): 0.94 – Out of all predictions made for positive, 64% were correct. This means that 5% of positive predictions were false positives.
+Class 0 (Positive): 0.92 – Out of all predictions made for positive, 64% were correct. This means that 5% of positive predictions were false positives.
 
-Class 1 (Negative): 0.96 – Out of all predictions made for Negative, 
+Class 1 (Negative): 0.95 – Out of all predictions made for Negative, 
 71% were correct. This indicates that 4% of negative predictions were false positives.
 
 #### Conclusion: 
@@ -236,9 +255,9 @@ The model is slightly better at predicting positive compared to negative, as evi
 
 #### Recall:
 
-Class 0 (Negative): 0.95 – The model correctly identified 95% of actual positive reviews, but missed 5% (false negatives).
+Class 0 (Negative): 0.96 – The model correctly identified 95% of actual positive reviews, but missed 5% (false negatives).
 
-•	Class 1 (Positive): 0.96 – The model correctly identified only 96% of the negative reviews, meaning that 4% of negative were missed.
+•	Class 1 (Positive): 0.92 – The model correctly identified only 96% of the negative reviews, meaning that 4% of negative were missed.
 
 #### Conclusion:
 
@@ -249,7 +268,7 @@ as shown by higher recall for Class 1. The recall for Class 0 is relatively low,
 
 Class 0 (Positive): 0.94 – This is a balanced metric combining precision and recall for positive, showing a good balance between false positives and false negatives.
 
-Class 1 (Negatives): 0.96 – The F1-score for negative indicates that the model struggles with negative detection compared to positive detection.
+Class 1 (Negatives): 0.94 – The F1-score for negative indicates that the model struggles with negative detection compared to positive detection.
 
 #### Conclusion: 
 
@@ -257,11 +276,11 @@ The model’s performance is good , though slightly better at predicting positiv
 
 #### Overall Accuracy:
 
-The model’s accuracy is 96%, meaning that 96% of the total predictions (negative and positive) were correct.
+The model’s accuracy is 94%, meaning that 94% of the total predictions (negative and positive) were correct.
 
 #### Macro and Weighted Averages:
 
-The macro average precision, recall, and F1-score are all approximately 0.95, 
+The macro average precision, recall, and F1-score are all approximately 0.94, 
 
 indicating that, on average, the model performs similarly across both classes.
 
