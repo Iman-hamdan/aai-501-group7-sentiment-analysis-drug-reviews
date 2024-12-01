@@ -1,5 +1,5 @@
 ### Drug Review Sentiment Analysis
-![alt text](image.png)
+
 
 ## Objective:
 
@@ -38,7 +38,7 @@ The above pie chart describes the percentage of reviews on each rating available
 
 Wordclouds are created to analyse the popular words seen in positive and negative reviews.
 
-![alt text](images/image.png)
+![alt text](images/wordcloud.png)
 
 ### preprocessing steps:
 
@@ -116,7 +116,35 @@ The main challenges expected in this project include:
 
 ## Logistic Regression
 
+Logistic regression is a linear model and may not fully capture the complexity of non-linear relationships in the data.
+
+Sentiment analysis often involves contextual and nuanced language, which might not be effectively modeled by a simple linear classifier.
+
+The features (review_len, neg, pos, compound) are limited in scope and may not fully represent the richness of the review text.
+
 ## LSTM(Least Short Term Memory)
+
+![alt text](images/LSTM_confusion.png)
+
+![alt text](images/LSTM-loss.png)
+
+Confusion Matrix and Training and Validation loss:
+
+Observations:
+
+•	True Negatives (TN): 27,970 predictions correctly identified as “Not Positive.”
+
+•	False Positives (FP): 4,379 predictions incorrectly classified as “Positive.”
+
+•	False Negatives (FN): 3,968 predictions incorrectly classified as “Not Positive.”
+
+•	True Positives (TP): 28,381 predictions correctly identified as “Positive.”
+
+•	The training loss decreases steadily, showing that the model is learning from the training data effectively.
+
+•	The validation loss follows a similar trend initially but starts to flatten around epoch 25 and slightly increases thereafter.
+
+•	This increase in validation loss indicates that the model might be overfitting the training data after epoch 25.
 
 
 
@@ -175,9 +203,9 @@ weighted avg       0.96      0.96      0.96     38928
 
 Below is the confusion matrix in model evaluations ,
 
-![alt text](images/image-2.png)
+![alt text](images/BERT-confusion.png)
 
-![alt text](images/image-1.png)
+![alt text](images/BERT-loss.png)
 
 ## Conclusions and Recommendations :
 
