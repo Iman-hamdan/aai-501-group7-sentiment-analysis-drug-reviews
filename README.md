@@ -295,9 +295,9 @@ indicating that, on average, the model performs similarly across both classes.
 
 #### Weaknesses:
 
-•	The model perform good with recall for negative and positive, correctly identifying only 96% of them. 
+•	The model perform good with recall for negative and positive, correctly identifying 97% of them. 
 
-This means it misses a significant portion of negative, incorrectly classifying them as positive.
+This means it misses a very less portion of negative, incorrectly classifying them as positive.
 
 
 ## References:
